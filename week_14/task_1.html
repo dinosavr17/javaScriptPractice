@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="task_1.css">
 </head>
 <body>
-<div class="wrapper">
+<div onclick="changeColor()" class="wrapper">
 <div class="nameInput">
     <label for="infoInput">Имя:</label>
     <input id="infoInput" placeholder="Введите имя">
@@ -19,6 +19,12 @@
     <div>
         <button onclick="{askName(); returnInfo();}">Отправить</button>
     </div>
+</div>
+<div onclick="changeColor()" class="wrapper">
+    <p>Тык</p>
+</div>
+<div onclick="changeColor()" id=lowerBlock" class="wrapper">
+    <p>Тык-тык</p>
 </div>
 </body>
 </html>

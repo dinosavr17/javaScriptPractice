@@ -8,3 +8,12 @@
 
 return reply;
 }
+const changeColor = () => {
+   let blocks = document.getElementsByClassName('wrapper');
+   blocks[0].style.backgroundColor = 'beige';
+    blocks[1].style.backgroundColor = 'lavender';
+    blocks[2].style.backgroundColor = 'cornflowerblue';
+   console.log(blocks);
+    return blocks;
+}
+changeColor();
