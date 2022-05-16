@@ -1,37 +1,26 @@
-<!DOCTYPE html>
-<html lang=”en”>
+<html>
 <head>
-  <meta charset=”UTF-8">
-  <title>Gallery</title>
-  <link rel="stylesheet" href="task_2.css">
-  <script src="task_2.js"></script>
+  <link rel="stylesheet" href="task_2.css" />
 </head>
+
 <body>
-
-<div class="slider">
-  <div class="item">
-    <img src="https://p.potaufeu.asahi.com/cdf0-p/picture/26732208/094e8cd595dc4d6e00968744a28f7455.jpg" alt="Первый слайд">
-    <div class="slideText"></div>
+<div class="carousel">
+  <div class="carousel__item carousel__item--visible">
+    <img src="images/1.jpg" />
+  </div>
+  <div class="carousel__item">
+    <img src="images/2.jpg" />
+  </div>
+  <div class="carousel__item">
+    <img src="images/3.jpg" />
   </div>
 
-  <div class="item">
-    <img src="https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/why-cats-are-best-pets-1559241235.jpg" alt="Второй слайд">
-    <div class="slideText"></div>
+  <div class="carousel__actions">
+    <button id="carousel__button--prev" aria-label="Previous slide"><</button>
+    <button id="carousel__button--next" aria-label="Next slide">></button>
   </div>
-
-  <div class="item">
-    <img src="https://img.webmd.com/dtmcms/live/webmd/consumer_assets/site_images/article_thumbnails/other/cat_relaxing_on_patio_other/1800x1200_cat_relaxing_on_patio_other.jpg" alt="Третий слайд">
-    <div class="slideText"></div>
-  </div>
-
-  <a class="prev" onclick="minusSlide()">&#10094;</a>
-  <a class="next" onclick="plusSlide()">&#10095;</a>
 </div>
 
-<div class="slider-dots">
-  <span class="slider-dots_item" onclick="currentSlide(1)"></span>
-  <span class="slider-dots_item" onclick="currentSlide(2)"></span>
-  <span class="slider-dots_item" onclick="currentSlide(3)"></span>
-</div>
+<script src="task_2.js"></script>
 </body>
 </html>

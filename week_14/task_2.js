@@ -1,40 +1,43 @@
+let slidePosition = 0;
+const slides = document.getElementsByClassName('carousel__item');
+const totalSlides = slides.length;
 
-/* Индекс слайда по умолчанию */
-let slideIndex = 1;
-showSlides(slideIndex);
+document.
+getElementById('carousel__button--next')
+    .addEventListener("click", function() {
+        moveToNextSlide();
+    });
+document.
+getElementById('carousel__button--prev')
+    .addEventListener("click", function() {
+        moveToPrevSlide();
+    });
 
-/* Функция увеличивает индекс на 1, показывает следующй слайд*/
-function plusSlide() {
-    showSlides(slideIndex += 1);
+function updateSlidePosition() {
+    for (let slide of slides) {
+        slide.classList.remove('carousel__item--visible');
+        slide.classList.add('carousel__item--hidden');
+    }
+
+    slides[slidePosition].classList.add('carousel__item--visible');
 }
 
-/* Функция уменьшяет индекс на 1, показывает предыдущий слайд*/
-function minusSlide() {
-    showSlides(slideIndex -= 1);
+function moveToNextSlide() {
+    if (slidePosition === totalSlides - 1) {
+        slidePosition = 0;
+    } else {
+        slidePosition++;
+    }
+
+    updateSlidePosition();
 }
 
-/* Устанавливает текущий слайд */
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
+function moveToPrevSlide() {
+    if (slidePosition === 0) {
+        slidePosition = totalSlides - 1;
+    } else {
+        slidePosition--;
+    }
 
-/* Основная функция слайдера */
-function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("item");
-    let dots = document.getElementsByClassName("slider-dots_item");
-    if (n > slides.length) {
-        slideIndex = 1
-    }
-    if (n < 1) {
-        slideIndex = slides.length
-    }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+    updateSlidePosition();
 }
