@@ -1,14 +1,9 @@
-alert('ddd'-2);
 let greeting = 'Привет';
-x = 5;
-++x;
-x -= 2;
-alert(x); // 4 
 function sendMessage () {
-let name = prompt('Как тебя зовут?', '');
-name = (name === null) ? 'Аноним' : name ;
-let message = greeting + ', ' + name + '!';
-alert(message);
+    let name = prompt('Как тебя зовут?', '');
+    name = (name === null) ? 'Аноним' : name ;
+    let message = greeting + ', ' + name + '!';
+    alert(message);
 }
 let value;
 let secondValue;
