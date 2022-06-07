@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chinese Festival</title>
+    <link rel="stylesheet" href="task_2.css">
+    <link rel="shortcut icon" href="img/lantern.png" type="image/png">
+</head>
+<body>
+<main>
+<div class="wrapper">
+    <header class="mainHeader">
+        <h1>元宵节</h1>
+        <p> 这是一个纪念英雄的节日，
+            在夜里，人们会放出「霄灯」和「明霄灯」，升上夜空。
+        </p>
+    </header>
+    <section class="card">
+<form>
+    <div id="commentArea"></div>
+    <div id="errorCommentArea"></div>
+    <div class="nameArea">
+        <label for="name">名字</label>
+    <input id="name" type="text"/>
+    </div>
+    <div class="emailArea">
+    <label  for="email">电子邮箱</label>
+    <input id="email"/>
+    </div>
+    <div class="phoneArea">
+    <label for="phone">电话号码</label>
+    <input  id="phone" type="tel"/>
+    </div>
+    <div class="passwordArea">
+    <label for="password">密码</label>
+    <input id="password" type="password"/>
+    </div>
+    <div class="confirmPasswordArea">
+    <label for="confirm-password">重复密码</label>
+    <input  id="confirm-password" type="password"/>
+    </div>
+    <div class="sendButton">
+    <button type="reset" id="sendButton" onclick="handleClick()">提交</button>
+</div>
+</form>
+    </section>
+<aside class="coverImage">
+    <img id="coverImage" src="img/coverImage.jpg">
+</aside>
+</div>
+</main>
+<script>
+    let reply = document.getElementById('commentArea')
+    let error = document.getElementById('errorCommentArea')
+    let nameInput = document.getElementById('name');
+    let emailInput = document.getElementById('email');
+    let phoneInput = document.getElementById('phone');
+    let passwordInput = document.getElementById('password');
+    let confirmPasswordInput = document.getElementById('confirm-password');
+    function validateEmail(email) {
+        const emailRegex = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        return emailRegex.test(email);
+    }
+    function validatePhone(phoneNumber) {
+        const phoneRegex = /^((8|\+7)[\- ]?)?(\(?\d{3,4}\)?[\- ]?)?[\d\- ]{5,10}$/;
+        return phoneRegex.test(phoneNumber);
+    }
+    handleClick = () => {
+        //Можно было бы решить поставив атрибут required
+        if((nameInput.value==='')||(emailInput.value==='')||(phoneInput.value === '')
+            ||(passwordInput.value==='')||(confirmPasswordInput.value==='')){
+            error.innerHTML = 'Одно из полей незаполнено'
+        }
+        else if (!validateEmail(emailInput.value))  {
+            error.innerHTML = 'Некорректный email'
+        }
+        else if (passwordInput.value!==confirmPasswordInput.value)  {
+            alert('Пароли должны совпадать');
+            error.innerHTML = 'Пароли должны совпадать'
+        }
+        else if (!validatePhone(phoneInput.value)) {
+            error.innerHTML = 'Некорректный номер телефона'
+        }
+        else {
+            reply.innerHTML = '欢迎光临' + ' '+ nameInput.value;
+        }
+    }
+
+</script>
+</body>
+</html>

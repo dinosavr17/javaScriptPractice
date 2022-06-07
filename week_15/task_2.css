@@ -1,0 +1,118 @@
+* {
+
+}
+.wrapper {
+    display: grid;
+    grid-template-areas:
+                        "mainHeader mainHeader"
+                        "card coverImage"
+                       "card coverImage"
+                       "card coverImage"
+                        "card coverImage"
+                        "card coverImage"
+                        "sendButton sendButton";
+    width: 60vw;
+    height: 100vh;
+    gap: 20px;
+    padding: 2em;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    justify-self: center;
+    align-content: flex-start;
+    box-sizing: border-box;
+    border-style: solid;
+    border-radius: 10px;
+    grid-template-columns: 1fr 1fr;
+    background-image: url("img/background.jpg");
+    background-size: 100%;
+    /*background-repeat: no-repeat;*/
+}
+.mainHeader {
+    grid-area: mainHeader;
+    display: grid;
+    justify-self: center;
+    justify-content: center;
+    align-content: center;
+    color: darkred;
+    background-color: #eceee8;
+    padding: 0.1em;
+}
+.nameArea {
+    display: grid;
+    margin: 0.5em;
+    border-color: transparent;
+}
+.emailArea {
+    display: grid;
+    margin: 0.5em;
+}
+.phoneArea {
+    display: grid;
+    margin: 0.5em;
+}
+.passwordArea {
+    display: grid;
+    margin: 0.5em;
+}
+.confirmPasswordArea {
+    display: grid;
+    margin: 0.5em;
+}
+#coverImage {
+    max-height: 250px;
+    max-width: 350px;
+    border-radius: 10px;
+}
+.coverImage {
+    grid-area: coverImage;
+}
+input {
+    border-radius: 5px;
+    border-style: solid;
+    background-color: transparent;
+    border-color: #282727;
+   padding: 3px;
+    mso-border-shadow: yes;
+}
+.sendButton {
+    grid-area: sendButton;
+    display: grid;
+    justify-items: center;
+    align-self: center;
+}
+#sendButton {
+    width: 50%;
+    background-color: darkred;
+    color: #eceee8;
+    border-radius: 10px;
+    padding: 5px;
+    min-width: 100px;
+}
+#sendButton:hover {
+    box-shadow: 5px 5px rgba(65, 59, 59, 0.78)
+}
+input:focus {
+background-color: #eceee8;
+    border-color: darkred;
+}
+label{
+    color: darkred;
+}
+.card {
+    grid-area: card;
+}
+#commentArea:not(:empty) {
+    background-color: green;
+    color: white;
+    display: grid;
+    justify-items: center;
+    border-radius: 5px;
+    padding: 5px;
+}
+#errorCommentArea:not(:empty) {
+    background-color: darkred;
+    color: white;
+    border-radius: 5px;
+    padding: 5px;
+}
