@@ -18,3 +18,8 @@
 .nameTextarea {
     margin: 0.5em;
 }
+input {
+   border-color: blue;
+    border-radius: 10px;
+    background-color: aqua;
+}
