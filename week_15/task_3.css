@@ -1,0 +1,12 @@
+#wrapper {
+border-style: solid;
+    height: 100vh;
+    width: 80vw;
+    display: grid;
+    justify-self: center;
+    flex-flow: row;
+    justify-items: center;
+    margin: auto;
+    border-radius: 5px;
+    padding: 1em;
+}
