@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Автомобильный калькулятор</title>
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="task_2.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap" rel="stylesheet">
+</head>
+<body>
+<section class="wrapper">
+    <div class="header"><h1>Автомобильный калькулятор</h1></div>
+    <form class="autoCalculator">
+        <div class="brandInput">
+            <label for="brand"><b>Марка машины</b></label>
+            <select id="brand">
+                <option>Toyota</option>
+                <option>Ford</option>
+                <option>Mercedes</option>
+            </select>
+        </div>
+        <div class="yearInput">
+            <span><b>Год выпуска</b></span>
+            <div class="yearFields">
+                <input id="2010" type="checkbox">
+            <label for="2010">2010</label>
+                <input id="2011" type="checkbox">
+            <label for="2011">2011</label>
+                <input id="2012" type="checkbox">
+            <label for="2012">2012</label>
+                <input id="2014" type="checkbox">
+            <label for="2014">2014</label>
+                <input id="2016" type="checkbox">
+            <label for="2016">2016</label>
+                <input id="2018" type="checkbox">
+            <label for="2018">2018</label>
+            </div>
+        </div>
+        <div class="bodyInput">
+            <span><b>Тип кузова</b></span>
+            <div>
+            <input name="body" id="sedan" type="radio">
+                <label for="sedan">Седан</label>
+            <input name="body" id="crossover" type="radio">
+                <label for="crossover">Внедорожник</label>
+            </div>
+        </div>
+        <div class="engineInput">
+            <span><b>Двигатель</b></span>
+            <div>
+            <input name="engine" id="diesel" type="radio">
+                <label for="diesel">Дизель</label>
+            <input name="engine" id="petrol" type="radio">
+                <label for="petrol">Бензин</label>
+            </div>
+        </div>
+        <div class="transmissionInput">
+            <span><b>Коробка передач</b></span>
+            <div>
+            <input name="transmission" id="manual" type="radio">
+                <label for="manual">Механика</label>
+            <input name="transmission" id="automatic" type="radio">
+                <label for="automatic">Автомат</label>
+            </div>
+        </div>
+        <div class="volumeInput">
+            <label for="volume"><b>Объем двигателя</b></label>
+            <input  id="volume" type="text">
+        </div>
+        <div class="powerInput">
+            <label for="power"><b>Мощность л/c</b></label>
+            <input  id="power" type="text">
+        </div>
+        <div class="colorInput">
+            <span>Цвет</span>
+            <input name="transmission" id="color" type="color">
+        </div>
+        <div>
+        <button class="customBtn">Рассчитать</button>
+        </div>
+    </form>
+    <aside class="pictureWrapper">
+            <img id="handshakeImg" src="img/handShake.png">
+        <img id="carPicture" src="img/carIllustration.jpg">
+            <img id="tape" src="img/tape.png">
+        <img id="calcImg" src="img/calc.png">
+    </aside>
+</section>
+<script src="task_2.js"></script>
+</body>
+</html>

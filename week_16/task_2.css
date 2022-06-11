@@ -1,0 +1,118 @@
+
+* {
+    font-family: 'Amatic SC', cursive;
+    letter-spacing: 2px;
+    font-weight: normal;
+}
+.wrapper {
+    display: grid;
+    justify-content: space-between;
+    padding: 1em;
+    border-style: solid;
+    align-items: flex-start;
+    width: 90vw;
+
+    justify-self: center;
+    margin: 1em auto 2em;
+    gap: 1em;
+    grid-template-areas: 'header header'
+            'autoCalculator pictureWrapper';
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    border-radius: 5px;
+    background-image: url("img/background_4.jpg");
+    font-size: 32px;
+}
+.brandInput {
+    display: block;
+    padding: 0.5em 1em;
+    flex-direction: row;
+}
+.yearInput {
+    display: block;
+    flex-direction: row;
+    align-items: center;
+    justify-items: center;
+    padding: 0.5em 1em;
+    gap: 1em;
+}
+
+.bodyInput {
+    display: block;
+    flex-direction: row;
+    padding: 0.5em 1em;
+}
+.engineInput {
+    display: block;
+    flex-direction: row;
+    padding: 0.5em 1em;
+}
+.transmissionInput {
+    display: block;
+    flex-direction: row;
+    padding: 0.5em 1em;
+}
+.volumeInput {
+    display: grid;
+    flex-direction: column;
+    padding: 0.5em 1em;
+}
+.powerInput {
+    display: grid;
+    flex-direction: column;
+    padding: 0.5em 1em;
+}
+.colorInput {
+    display: block;
+    padding: 0.5em 1em;
+}
+.customBtn {
+    padding: 0.5em 1em;
+    display: block;
+    margin: 1em;
+    border-radius: 5px;
+    background-color: #fcd4d5;
+}
+.autoCalculator {
+    grid-area: autoCalculator;
+    background-color: snow;
+}
+#carPicture {
+    grid-area: carPicture;
+    max-width: 100%;
+    background-size: cover;
+}
+#tape {
+    position: absolute;
+    max-width: 60%;
+    right: 60%;
+    top: 70%;
+    transform: rotate(25deg);
+    background-size: cover;
+}
+#calcImg {
+    max-width: 70%;
+    left: 10%;
+    top: 80%;
+    display: block;
+    transform: rotateY(-25deg) rotateX(19deg) rotateZ(0deg);
+    position: absolute;
+    background-size: cover;
+}
+#handshakeImg {
+    width: 40%;
+    position: absolute;
+}
+.pictureWrapper {
+    position: relative;
+    display: grid;
+    justify-content: center;
+    max-height: 50%;
+    grid-area: pictureWrapper;
+}
+.header {
+    grid-area: header;
+    display: block;
+    justify-self: center;
+    font-size: 36px;
+}
